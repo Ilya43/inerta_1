@@ -26,3 +26,20 @@ $(document).ready(function () {
 
     });
 });
+
+$(document).ready(function () {
+
+    $("#form-ajax").submit(function () {
+        $.ajax({
+            type: "POST",
+            url: "smart.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+            $("#form-ajax").trigger("reset");
+        });
+        return false;
+    });
+
+});
