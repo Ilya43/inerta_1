@@ -1,4 +1,5 @@
-AOS.init();
+// AOS.init();
+AOS.init({ disable: 'mobile' });
 //______SWIPER
 $(document).ready(function () {
     let swiper;
